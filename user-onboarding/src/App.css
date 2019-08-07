@@ -1,16 +1,68 @@
 .App {
   text-align: center;
-  background-color: #282c34
 }
 
-
 .form{
-  background-color: #282c34;
+  background-image:linear-gradient(#0f9b0f,#003300,#000000);
+  color: white;
+  font-size: 23px;
+  text-align: center;
+}
+
+.container{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.field{
+  width: 45%;
+}
+
+#password.field, #email.field, #name.field{
+  width: 45%;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#password.field{
+  margin-bottom: 10px;
+}
+
+#name.field{
+  margin-left: 40px;
+}
+
+#email.field{
+  margin-left:47px; 
+}
+
+label{
+  font-family: 'Lacquer', sans-serif;
+}
+
+#terms{
+  width: 10%;
+}
+
+p{
+  font-family: 'Lacquer', sans-serif;
+  color: red;
+}
+
+button{
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  padding: 15px 25px 15px 25px;
+  border-radius: 8px;
+  background: black;
+  box-shadow:  3px 3px 3px #003300;
   color: white;
+  font-family: 'Lacquer', sans-serif;
+  font-size: 20px;
 }
