@@ -37,6 +37,11 @@ function UserForm({ values, errors, touched, isSubmitting }) {
           />
           {touched.terms && errors.terms && <p>{errors.terms}</p>}
         </div>
+        <Field component="select" name="dropdown">
+        <option value="pencil">Pencil</option>
+        <option value="marker">Marker</option>
+        <option value="pen">Pen</option>
+      </Field>
         <button type="submit" disabled={isSubmitting}>
           Submit
         </button>
@@ -46,12 +51,13 @@ function UserForm({ values, errors, touched, isSubmitting }) {
 }
 
 const FormikUserForm = withFormik({
-  mapPropsToValues({ name, email, password, terms }) {
+  mapPropsToValues({ name, email, password, terms, dropdown }) {
     return {
       name: name || "",
       email: email || "",
       password: password || "",
-      terms: terms || false
+      terms: terms || false,
+      dropdown: dropdown || 'pencil'
     };
   },
 
